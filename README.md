@@ -1,4 +1,4 @@
-# belowwind-islander.github.io
+# Chi
 
 #### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
 
