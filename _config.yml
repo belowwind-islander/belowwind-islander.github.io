@@ -24,9 +24,9 @@ minima:
   # Available skins: classic, dark, auto, solarized, solarized-light, solarized-dark
   skin: solarized-dark  # Change this to switch themes
   
-  # date_format: "%b %-d, %Y"
+  # date_format: "%d %b %Y"
   
   # Uncomment and customize social links as needed
-  # social_links:
-  #   - { platform: github, user_url: "https://github.com/yourusername" }
-  #   - { platform: linkedin, user_url: "https://linkedin.com/in/yourprofile" }
+  social_links:
+    - { platform: github, user_url: "https://github.com/belowwind-islander" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/chi-yunng-lim-bb36811a6" }
