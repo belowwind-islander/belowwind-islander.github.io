@@ -1,5 +1,17 @@
-Hello, I'm Chi Yunng (pronounced *chee-young*) and welcome to my site! 
+# v3
 
-I am currently a student at LSE studying the MSc in Data Science and have 2 years prior experience as a training actuary in the insurance industry. I created this site to showcase projects from my academic and professional journey. You'll find that they span both R and Python, with Python being my most recently learnt. Feel free to explore and I hope you find them insightful.
+Third iteration of my personal website built with Jekyll.
 
-You can learn more about me and my projects below!
+> 📢 **PSA for those who want to fork or copy this repo and use it for their own site:**
+>
+> Please be a decent person and give me proper credit by linking back to my website! Refer to this handy [quora post](https://www.quora.com/Is-it-bad-to-copy-other-peoples-code) if you're not sure.
+
+## Dependencies
+
+- [Gulp](https://gulpjs.com/)
+
+## Getting Started
+
+1.  `gem install jekyll sass bundler jekyll-minifier jekyll-sitemap`
+2.  `npm install`
+3.  `npm start`
