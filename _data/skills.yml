@@ -3,7 +3,7 @@ languages:
   - item: SQL
   - item: Python
   - item: SAS 
-  - item: 
+  - item: DAX
 
 frameworks:
   - item: TensorFlow
@@ -11,11 +11,13 @@ frameworks:
   - item: NetworkX
   - item: XGBoost
   - item: PySpark
-  - item: PyTorch
   
 tools:
   - item: Git & Github
   - item: Google Cloud Platform
+  - item: VSCode
+  - item: JupyterLab & Jupyter Notebook
   - item: RStudio
   - item: Power BI
+  - item: BigQuery
   - item: SAS
