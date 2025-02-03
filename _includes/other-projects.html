@@ -1,17 +1,23 @@
 <section class="section other-projects">
-  <div class="section__title">Other Projects</div>
+  <div class="section__title">Projects</div>
   <div class="section__content">
-    {% for project in site.data.other-projects %}
+    {% for post in site.posts reversed %}
     <div class="project">
       <div class="project__name">
-        <a href="{{project.url}}" target="_blank" class="arrow-link">{{project.name}}</a>
+        <a href="{{ post.url | relative_url }}" class="underline-link">
+          {{ post.title }}
+        </a>
       </div>
-      <p>{{project.description}}</p>
+      {% if post.description %}
+      <p class="project__description">{{ post.description }}</p>
+      {% endif %}
+      {% if post.tags %}
       <div class="project__used">
-        {% for item in project.used %}
-        <span class="project__used__item">{{item.thing}}</span>
+        {% for tag in post.used %}
+        <span class="project__used__item">{{ tag }}</span>
         {% endfor %}
       </div>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
