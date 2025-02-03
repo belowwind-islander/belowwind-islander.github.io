@@ -13,7 +13,6 @@ frameworks:
   - item: PySpark
   - item: PyTorch
   
-
 tools:
   - item: Git & Github
   - item: Google Cloud Platform
