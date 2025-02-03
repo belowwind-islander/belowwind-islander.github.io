@@ -5,7 +5,7 @@
       {% for job in site.data.experience %}
       <div class="job">
         <div class="time-place">
-          <div class="job__company">
+          <div class="job__company underline-link">
             <a href="{{job.url}}" target="_blank">{{job.company}}</a>
           </div>
           <div class="job__time">{{job.time}}</div>
@@ -15,6 +15,6 @@
       {% endfor %}
     </div>
 
-    <a href="{{site.resume}}" target="_blank" class="arrow-link">View My Resume</a>
+    <a href="{{site.resume}}" target="_blank" class="underline-link link-lg">View My Resume</a>
   </div>
 </section>
