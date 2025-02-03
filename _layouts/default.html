@@ -8,6 +8,17 @@ layout: compress
 </head>
 <body>
   {{ content }}
+  <head>
+    ...
+    <!-- Add this before main.js -->
+    <script>
+      window.themeState = {
+        isNight: localStorage.getItem('night-mode') === 'true'
+      };
+    </script>
+    <script src="{{ 'js/main.js' | relative_url }}" defer></script>
+  </head>
+  <body class="{% if themeState.isNight %}night{% endif %}">
   {% include scripts.html %}
 </body>
 </html>

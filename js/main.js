@@ -1,15 +1,15 @@
 $(function() {
   const d = new Date();
   const hours = d.getHours();
-  const night = hours >= 19 || hours <= 7; // between 7pm and 7am
+  // const night = hours >= 19 || hours <= 7; // between 7pm and 7am
   const body = document.querySelector('body');
   const toggle = document.getElementById('toggle');
   const input = document.getElementById('switch');
 
-  if (night) {
-    input.checked = true;
-    body.classList.add('night');
-  }
+  // if (night) {
+  //   input.checked = true;
+  //   body.classList.add('night');
+  // }
 
   toggle.addEventListener('click', function() {
     const isChecked = input.checked;
@@ -72,6 +72,81 @@ $(function() {
   sr.reveal('.background');
   sr.reveal('.skills');
   sr.reveal('.experience', { viewFactor: 0.2 });
-  sr.reveal('.featured-projects', { viewFactor: 0.1 });
   sr.reveal('.other-projects', { viewFactor: 0.05 });
+});
+
+// Theme Manager
+class ThemeManager {
+  constructor() {
+    this.switch = document.getElementById('switch');
+    this.body = document.body;
+    this.init();
+  }
+
+  init() {
+    this.loadTheme();
+    this.switch.addEventListener('change', (e) => this.toggleTheme(e));
+  }
+
+  loadTheme() {
+    const savedTheme = localStorage.getItem('night-mode');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Priority: Saved preference > System preference > Light mode
+    const isNight = savedTheme !== null ? savedTheme === 'true' : prefersDark;
+    
+    this.body.classList.toggle('night', isNight);
+    this.switch.checked = isNight;
+    localStorage.setItem('night-mode', isNight);
+  }
+
+  toggleTheme(e) {
+    const isNight = e.target.checked;
+    this.body.classList.toggle('night', isNight);
+    localStorage.setItem('night-mode', isNight);
+  }
+}
+
+// Initialize when DOM loads
+document.addEventListener('DOMContentLoaded', () => {
+  // Theme Management
+  if (document.getElementById('switch')) {
+    new ThemeManager();
+  }
+
+  // Back Button Animation
+  document.querySelectorAll('.back-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location = this.href, 300);
+    });
+  });
+
+  // Top Button Behavior (Vanilla JS)
+  const topButton = document.getElementById('top-button');
+  if (topButton) {
+    let introHeight = 500;
+    const intro = document.querySelector('.intro');
+    if (intro) introHeight = intro.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+      topButton.style.display = window.scrollY > introHeight ? 'block' : 'none';
+    });
+
+    topButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Wave Hand Animation (Homepage only)
+  if (document.querySelector('.intro')) {
+    const hand = document.querySelector('.emoji.wave-hand');
+    const wave = () => hand.classList.add('wave');
+    const unwave = () => hand.classList.remove('wave');
+    
+    setTimeout(wave, 1000);
+    hand.addEventListener('mouseover', wave);
+    hand.addEventListener('mouseout', unwave);
+  }
 });
