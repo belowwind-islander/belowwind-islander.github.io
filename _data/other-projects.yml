@@ -1,8 +1,10 @@
-- name: Classifying Immune Cells with Machine Learning
-  url: https://belowwind-islander.github.io/2024/12/11/ST443-Project.html
-  code: https://belowwind-islander.github.io/2024/12/11/ST443-Project.html
-  description: Classification project for my "Machine Learning and Data Mining" module at LSE.
-  used:
-    - thing: R
-    - thing: Logistic Regression
-    - thing: Principle Component Analysis
+# - name: Classifying Immune Cells with Machine Learning
+#   url: https://belowwind-islander.github.io/2024/12/11/ST443-Project.html
+#   code: https://belowwind-islander.github.io/2024/12/11/ST443-Project.html
+#   description: Classification project for my "Machine Learning and Data Mining" module at LSE.
+#   used:
+#     - thing: R
+#     - thing: Logistic Regression
+#     - thing: Principle Component Analysis
+
+# NOT USED ANYMORE, _INCLUDES/OTHER-PROJECTS.HTML NOW LINKS TO _POSTS/
