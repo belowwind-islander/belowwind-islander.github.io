@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div id="site">
+  {% include switch.html %}
+  
+  <a href="{{ '/' | relative_url }}" class="back-button underline-link">← Back to Home</a>
+
+  <article class="section">
+    <header class="section__title">
+      <h1>{{ page.title }}</h1>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      
+        {% if page.github %}
+        <a  class="underline-link" href="{{ page.github }}">View on GitHub</a>
+        {% endif %}
+      
+    </header>
+
+    <div class="section__content">
+      {{ content }}
+      
+    </div>
+  </article>
+
+  {% include footer.html %}
+  {% include top-button.html %}
+</div>

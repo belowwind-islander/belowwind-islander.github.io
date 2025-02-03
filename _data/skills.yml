@@ -8,18 +8,14 @@ languages:
 frameworks:
   - item: TensorFlow
   - item: Scikit-Learn
-  - item: PyTorch
-  - item: Keras 
   - item: NetworkX
   - item: XGBoost
   - item: PySpark
-  - item: Hadoop
-  - item: Pytorch
-
+  - item: PyTorch
+  
 tools:
   - item: Git & Github
   - item: Google Cloud Platform
-  - item: Gulp & Grunt
-  - item: Chrome DevTools
-  - item: Postman
-  - item: MongoDB
+  - item: RStudio
+  - item: Power BI
+  - item: SAS
