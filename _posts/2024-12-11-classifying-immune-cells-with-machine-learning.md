@@ -53,7 +53,7 @@ When dealing with high-dimensional data (p ≈ n, 4123 features vs. 5142 samples
 
 In Fig. 2, support vector machines (SVM) emerged as the top performer for most metrics due to its **linear kernel that can non-linear relationships in high-dimensional spaces and built-in L2 regularisation**, effectively capturing sparse signals and ignoring noise. Random forests (RF) and gradient boosting decision trees (GBDT) also excelled, leveraging feature selection and non-linearity to model gene interactions. Interestingly, the linear discriminant analysis (LDA) model also performed well, suggesting **that the decision boundary between the two cells in a lower-dimensional projection of the data is not highly complex**.
 
-In contrast, logistic regression and k-NN struggled due to the noise of the data and QDA failed due to singular covariance matrices. These classifiers are likely to receive great benefit from dimensionality reduction such as PCA, which can be observed below.
+In contrast, logistic regression and k-NN struggled due to the noise of the data and QDA failed due to singular covariance matrices. These classifiers are likely to receive great benefit from dimensionality reduction such as principle component analysis (PCA), which can be observed below.
 
 | Model w/ PCA            | Accuracy   | Bal. Accuracy | AUC        | F1         |
 |:----------|:------------:|:------------:|:------------:|:------------:|
@@ -70,3 +70,9 @@ In contrast, logistic regression and k-NN struggled due to the noise of the data
 <figure class ="post-image">
     <figcaption>Fig. 3: Base model evaluations with PCA</figcaption>
 </figure>
+
+After applying PCA (Fig. 3), models that previously struggled, such as logistic regression and k-NN, saw significant improvements. Logistic regression achieved an AUC of 0.9913—one of the highest among all models, suggesting that PCA effectively removed noise and redundant features by making the dataset more linearly separable. However, tree-based models (RF, GBDT) experienced a performance drop, likely because PCA eliminated feature interactions crucial for decision-tree splits. 
+
+QDA became a viable model due to the lower dimension feature space and performed competitively. LDA remained strong, reinforcing the idea that class separation in a lower-dimensional space is well-defined.
+
+The biggest winner was SVM with a radial kernel, which outperformed all models with an accuracy of 0.9498 and F1-score of 0.9312, highlighting how non-linear models can fully leverage PCA’s transformation. This comparison underscores the importance of understanding how dimensionality reduction affects different learning algorithms in high-dimensional settings.
