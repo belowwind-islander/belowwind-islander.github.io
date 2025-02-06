@@ -13,9 +13,13 @@ In this post, I’ll walk through the **approach, key findings, and insights** f
 
 This was a group project completed for the "Machine Learning and Data Mining" module at LSE (ST443). My primary contribution was tackling a **binary classification problem** involving real-world RNA expression data. The goal was to classify immune cells into **T regulatory cells (TREG)** or **CD4+T cells**, a distinction that has important implications in autoimmune research. I performed **exploratory data analysis (EDA), trained multiple classifiers, and optimized model performance**—focusing on improving the **F1 score** through techniques such as **principle component analysis, cross-validation and hyperparameter tuning.**
 
+---
+
 ## Dataset
 
 The dataset contained **5,471 observations (n) of with 4,123 RNA expression measurements (p)**, making this a high-dimensional classification problem. It is worth noting that the data is made up of **2,115 TREG cells and 3,356 CD4+T cells**, meaning there is moderate class imbalance (39% TREG vs 61% CD4+T). For the purpose of classification, the TREG class will be taken as the positive outcome (ie. TREG = 1 and CD4+T = 0). There were no missing values so no imputation was needed. 
+
+---
 
 ## Exploratory Analysis
 
@@ -31,6 +35,8 @@ As seen in Fig. 1 above, all the plotted gene expressions show slight overlap be
 1. **Without data preprocessing, non-linear models will perform better vs linear models.**
 
 2. **Dimensionality reduction techniques can help to focus on the most informative features.**
+
+---
 
 ## Model Training and Selection
 
@@ -85,6 +91,7 @@ QDA became a viable model due to the lower dimension feature space and performed
 
 Interestingly, **Logistic Regression and SVM outperformed all models with identical performance metrics** (accuracy: 0.9489, balanced accuracy: 0.9414, F1-score: 0.9309), except AUC, after PCA. This happens because PCA reduced the dataset to its most informative dimensions, which allowed both models to learn a linear decision boundary as the optimal hyperplane. Before PCA, SVM had a clear advantage because it handles high-dimensional spaces better, whereas Logistic Regression struggled due to collinearity and irrelevant features. This demonstrates how **PCA can level the playing field for linear classifiers**, making Logistic Regression as effective as SVM. It is worth noting that the AUC is much higher for Logistic Regression because of its use of probabilities when assigning classes. 
 
+---
 
 ## Model Tuning
 
@@ -114,6 +121,8 @@ Since Principal Component Analysis (PCA) was applied before model training, the 
 </figure>
 
 When tuning the decision threshold (Fig. 6), it was found that 0.4 gave the optimal F1-score. This can be attributed to the class imbalance in the training set. **By lowering the threshold, the model achieved increased recall at a smaller cost of precision**. 
+
+---
 
 ## Conclusion
 
