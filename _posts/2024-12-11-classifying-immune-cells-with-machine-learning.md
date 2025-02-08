@@ -4,7 +4,7 @@ title: "Classifying Immune Cells with Machine Learning"
 date: 2024-12-11
 description: Classification project for my "Machine Learning and Data Mining" module at LSE.
 github: https://github.com/belowwind-islander
-used: [R, Logistic Regression, Principal Component Analysis]
+used: [R, Logistic Regression, Principal Component Analysis, Cross-Validation, Hyperparameter Tuning]
 ---
 
 ## Introduction
