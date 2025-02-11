@@ -216,7 +216,7 @@ figure.post-image {
 }
 
 figure.post-image img {
-  max-width: 60%;
+  max-width: 75%;
   height: auto;
   border-radius: 8px;
 }
@@ -229,6 +229,28 @@ figure.post-image figcaption {
 }
 
 .night figure.post-image figcaption {
+  color: #FFFFFF;
+}
+
+figure.post-image2 {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+figure.post-image2 img {
+  max-width: 95%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figure.post-image2 figcaption {
+  font-style: italic;
+  color: #121212;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.night figure.post-image2 figcaption {
   color: #FFFFFF;
 }
 
