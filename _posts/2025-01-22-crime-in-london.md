@@ -122,12 +122,12 @@ Although the model identifies relationships between crime, the absence of qualif
 
 ---
 
-### **Limitations & Future Work**  
+## **Limitations & Future Work**  
 - **Small Sample Size**: Only 33 boroughs limited statistical power. Expanding to multi-year panel data would strengthen the insights.  
 - **Crime Type Granularity**: Aggregating all crimes masked nuances (e.g., theft vs. violent crime). Since these crime types are likely to have unique drivers, the analysis could benefit from a more granular approach.   
 - **Causality vs. Correlation**: While models identified associations, causal inference requires longitudinal data.  
 
 ---
 
-### **Conclusion**  
+## **Conclusion**  
 This project highlights the link between socioeconomic factors and crime in London. Central boroughs see higher crime rates, likely due to population density and economic activity, while factors like education, housing prices, and public spending also play key roles. Our refined “Truncated Short Model” improved predictive accuracy, but correlation does not imply causation. Future work could explore causal mechanisms, crime-specific trends, and multi-year data to strengthen insights. Data-driven approaches like this can help inform policy and urban planning to enhance public safety.
