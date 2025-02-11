@@ -44,7 +44,7 @@ The analysis combined **12 datasets** spanning crime records, socioeconomic metr
 
 <figure class="post-image2">
   <img src="/img/posts/ST445/crimemap.png" alt="Description" loading="lazy">
-  <figcaption>Fig. 1: London Crime Heatmap</figcaption>
+  <figcaption>Fig. 1: London Crime Heatmap.</figcaption>
 </figure>
 
 #### 2. Hidden Patterns with Dimensionality Reduction
@@ -56,7 +56,7 @@ K-means clustering identified two major groups that broadly align with central v
 
 <figure class="post-image2">
   <img src="/img/posts/ST445/clusters.png" alt="Description" loading="lazy">
-  <figcaption>Fig. 2: Comparison of PCA Plots: spatial-based selection vs. K-means clustering</figcaption>
+  <figcaption>Fig. 2: Comparison of PCA Plots: spatial-based selection vs. K-means clustering.</figcaption>
 </figure>
 
 #### 3. Potential Socioeconomic Drivers of Crime
@@ -69,7 +69,7 @@ To better analyse the hypotheses, analysis was performed on a subset of the expl
 
 <figure class="post-image2">
   <img src="/img/posts/ST445/corrplots.png" alt="Description" loading="lazy">
-  <figcaption>Fig. 3: Correlation Plots of Crime with different socioeconomic factors  </figcaption>
+  <figcaption>Fig. 3: Correlation Plots of Crime with different socioeconomic factors.</figcaption>
 </figure>
 
 
@@ -101,7 +101,7 @@ Although the model identifies relationships between crime, the absence of qualif
 
 <figure class="post-image2">
   <img src="/img/posts/ST445/corrmap.png" alt="Description" loading="lazy">
-  <figcaption>Fig. 4: Correlations between potential determinants of crime in London. High number of correlated covariates explains the weak performance behind the "Kitchen-Sink" model. </figcaption>
+  <figcaption>Fig. 4: Correlations between potential determinants of crime in London. High number of correlated covariates explains the weak performance behind the "Kitchen-Sink" model.</figcaption>
 </figure>
 
 | Variable | Coefficient | Std. Error | t-value | p-value | 95% Conf. Interval |
