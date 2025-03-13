@@ -161,7 +161,7 @@ where $$SE(\hat{\beta}_1)$$ is the standard error of $$\hat{\beta}_1$$. Under $$
 
 At a significance level of 5%, $$H_0$$ is rejected if the p-value is less than 0.05, indicating that the test centre has a significant effect on pass rates.
 
-### Model Summary
+## Model Summary
 
 Below is a summary of the trained logistic regression model: 
 
