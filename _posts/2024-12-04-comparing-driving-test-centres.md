@@ -11,6 +11,8 @@ used: [R, Logistic Regression, Hypothesis Testing]
 
 In this post, I’ll walk through the **approach and key findings** from analysing the pass rates between two different driving test centres in London. This was an individual project completed for the "Data Analysis and Statistical Methods" module at LSE (ST447).
 
+---
+
 # Introducing My Friend, XYZ
 
 ```         
@@ -33,6 +35,8 @@ This report looks to use logistic regression and hypothesis testing to analyse t
 2.  **What is XYZ's expected passing rate at Wood Green test centre?**
 3.  **Of these two locations, where should XYZ take the test? Is there any evidence to (statistically) support this suggestion?**
 
+---
+
 # The Dataset
 
 The dataset is a transformed version of the **DVSA1203 dataset from the UK government website**. It contains information on driving tests conducted at Crawley and Wood Green test centres from 2010 to 2024, detailing the number of tests taken and passed broken down by age (17–25) and gender.
@@ -40,6 +44,8 @@ The dataset is a transformed version of the **DVSA1203 dataset from the UK gover
 Due to the large number of tests that have historically been taken at Crawley and Wood Green, the analysis **focuses on the data points generated from tests taken only by individuals who are 17 years old and male**. This minimises variability due to age or gender and focuses the analysis specifically with XYZ's profile.
 
 It must be noted that the periods recorded in the DVSA1203 dataset span 12 months starting from September. For ease, each period is labeled in the dataset based on the calendar year for which the majority of the period falls (e.g. Sept 2009 - Sept 2010 is labelled as 2010).
+
+---
 
 # Methodology
 
@@ -87,6 +93,7 @@ Based on the sample mean from the last three years, XYZ's expected passing rate 
 To identify whether one test centre is more favourable than the other, a **Logistic Regression** model with a single predictor (the test centre), $$X$$, will be built.
 
 ### Introduction to Logistic Regression
+
 Logistic regression is a **statistical method used for binary classification problems**, where the response variable can take one of two values (e.g., pass or fail). Unlike linear regression, logistic regression **models the probability that a given observation belongs to a particular category**. 
 
 The logistic regression model assumes the relationship between the predictor variable, $$X$$, and the probability of success, 
@@ -193,6 +200,8 @@ Additionally, the **p-value associated with $$\hat{\beta}_1$$ is $$0.00327$$** w
 It is also worth noting that the p-value is small enough such that the conclusion is also statistically significant at the 1% significance level.
 
 As a result, the null hypothesis is rejected in the analysis and it is concluded that **there is statistically significant evidence to suggest that the pass rate is higher at Wood Green than Crawley**. It is therefore recommended that XYZ take their test at Wood Green.
+
+---
 
 # Conclusion
 
