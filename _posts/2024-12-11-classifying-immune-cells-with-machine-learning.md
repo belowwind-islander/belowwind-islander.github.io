@@ -27,7 +27,7 @@ Since there are many potential covariates to analyse, the inital approach for th
 
 <figure class="post-image">
   <img src="/img/posts/ST443/boxplot.png" alt="Description" loading="lazy">
-  <figcaption>Fig. 1: Boxplot of 10 Genes</figcaption>
+  <figcaption>Fig. 1: Boxplot of 10 genes</figcaption>
 </figure>
 
 As seen in Fig. 1 above, all the plotted gene expressions show slight overlap between the TREG and CD4+T cells. This suggests that the decision boundary between the two classes in not linearly separable in the current feature space, which implications are two-fold. 
