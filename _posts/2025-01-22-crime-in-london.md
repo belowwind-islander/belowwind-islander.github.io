@@ -9,7 +9,7 @@ used: [Python, APIs, BeautifulSoup, Data Visualisation, Linear Regression]
 
 ## Introduction
 
-In this blog post, I’ll walk through the key insights, methodologies, and challenges encountered in this analysis for my "Managing and Visualising Data" module at LSE.
+In this post, I’ll walk through the key insights, methodologies, and challenges encountered in this analysis for my "Managing and Visualising Data" module at LSE.
 
 Crime is a complex phenomenon shaped by a web of social, economic, and environmental factors. For this project, my group and I set out to investigate how socioeconomic indicators correlate with crime rates in London. Leveraging open datasets from the UK government, this project aimed to answer critical questions: *Which London boroughs face the highest crime rates? How do factors like education, housing, and public spending influence crime? Can we predict future crime trends?*
 

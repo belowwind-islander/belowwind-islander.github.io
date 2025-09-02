@@ -6,10 +6,10 @@ languages:
   - item: DAX
 
 frameworks:
-  - item: TensorFlow
   - item: Scikit-Learn
-  - item: NetworkX
   - item: XGBoost
+  - item: TensorFlow
+  - item: PyTorch  
   - item: PySpark
   
 tools:
