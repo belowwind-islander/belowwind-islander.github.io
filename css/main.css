@@ -279,3 +279,40 @@ th {
 .night th {
   background-color: #898989;
 }
+
+/* Add bullets specifically for post content */
+article .section__content ul,
+.section__content.post-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+article .section__content ul li,
+.section__content.post-content ul li {
+  list-style: disc;
+  margin-bottom: 5px;
+}
+
+article .section__content ol,
+.section__content.post-content ol {
+  list-style: decimal;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+article .section__content ol li,
+.section__content.post-content ol li {
+  list-style: decimal;
+  margin-bottom: 5px;
+}
+
+/* Ensure skills section stays without bullets */
+.skills .skillz__category ul {
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+.skills .skillz__category__item {
+  list-style: none !important;
+}
